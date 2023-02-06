@@ -59,7 +59,7 @@
                         <li>
                             <RouterLink id="tableEditingLink"
                                 class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                                to="table-editing">
+                                to="/table-editing">
                                 <span class="select-none">Редактирование таблиц</span>
                             </RouterLink>
                         </li>
@@ -152,6 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navOpen.classList.toggle("hidden");
     });
 
+    
     sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
 });
 </script>

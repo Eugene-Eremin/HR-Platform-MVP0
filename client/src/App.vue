@@ -2,8 +2,8 @@
   <div>
     <header class="mb-10">
       <NavbarForAdmin v-if="userStore.admin" />
-      <NavbarForApplicant v-else />
-      <NavbarForEmployer />
+      <!-- <NavbarForApplicant v-else />
+      <NavbarForEmployer /> -->
     </header>
     <main>
       <RouterView />
