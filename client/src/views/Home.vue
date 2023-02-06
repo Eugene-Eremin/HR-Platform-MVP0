@@ -12,6 +12,7 @@ let file = []
 
 const changeFile = (event) => {
     file = event.target.files[0]
+    console.log(file)
 }
 const sendFile = async () => {
     let formData = new FormData();
