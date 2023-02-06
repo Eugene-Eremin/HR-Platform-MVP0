@@ -1,18 +1,32 @@
 <template>
   <div>
-    <NavbarAdmin v-if="testStore.admin"></NavbarAdmin>
-    <NavbarUser v-else></NavbarUser>
-    <RouterView />
+    <header class="mb-10">
+      <NavbarForAdmin v-if="testStore.admin" />
+      <NavbarForApplicant v-else />
+      <NavbarForEmployer />
+    </header>
+    <main>
+      <RouterView />
+    </main>
+    <footer>
+    </footer>
   </div>
 </template>
 
 <script setup>
-import NavbarAdmin from './components/NavbarAdmin.vue';
-import NavbarUser from './components/NavbarUser.vue';
+import NavbarForAdmin from './components/Navbar/NavbarForAdmin.vue';
+import NavbarForApplicant from './components/Navbar/NavbarForApplicant.vue';
+import NavbarForEmployer from './components/Navbar/NavbarForEmployer.vue';
 
+import { ref, onBeforeMount } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
+
 import { useTestStore } from './stores/testStore'
 
 const testStore = useTestStore()
+
+onBeforeMount(() => {
+  testStore.admin = true
+})
 
 </script>

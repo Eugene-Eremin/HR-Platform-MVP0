@@ -1,46 +1,52 @@
 <template>
-    <div class="flex flex-col ">
-        <input @change="changeFile" type="file" />
-        <button @click="sendFile" class="mr-auto">Отправить файл</button>
+    <div class="overflow-y-hidden">
+        <div class="mx-auto container flex justify-center items-center py-12 px-4 sm:px-6 2xl:px-0">
+            <div class="flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0">
+                <img class="w-80 sm:w-auto lg:hidden" src="/home-img.png" alt="home" />
+                <div class="w-80 sm:w-auto flex flex-col justify-start items-start">
+                    <div>
+                        <p class="text-3xl xl:text-4xl font-semibold leading-9 text-gray-800">MVP0</p>
+                    </div>
+                    <div class="mt-4 lg:w-4/5 xl:w-3/5">
+                        <p class="text-base leading-6 text-gray-600">MVP0 — это HR-платформа, где вы можете найти работу
+                            или сотрудников в зависимости от ваших потребностей.</p>
+                    </div>
+                    <div class="mt-16 w-full">
+                        <button
+                            class="px-4 bg-gray-900 flex justify-between items-center w-full lg:w-72 h-14  text-white hover:bg-gray-700 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
+                            <RouterLink to="/vacancies" class="text-xl font-medium leading-5">Начать</RouterLink>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.66663 16H25.3333" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M20 21.3333L25.3333 16" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20 10.6667L25.3333 16" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col sm:flex-row jusitfy-center items-center sm:space-x-5 xl:space-x-8 space-y-4 sm:space-y-0">
+                    <img class="w-96 h-96 max-w-sm hidden lg:block" src="/home-img.png" alt="home" />
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup>
-import axios from 'axios'
-import { onBeforeMount } from 'vue';
+import { useRouter, useRoute } from 'vue-router'
 
-import { useTestStore } from '../stores/testStore'
+import { useNavbarStore } from '../stores/navbarStore';
 
-const testStore = useTestStore()
+const navbarStore = useNavbarStore()
 
-onBeforeMount(() => {
-    testStore.admin = true
-})
+navbarStore.pathNow = useRoute().path
 
-let file = []
+console.log(navbarStore.pathNow)
 
-const changeFile = (event) => {
-    file = event.target.files[0]
-    console.log(file)
-}
-const sendFile = async () => {
-    let formData = new FormData();
-
-    console.log(formData)
-    console.log(file)
-
-    formData.append('file', file)
-
-    console.log(formData)
-
-
-    await axios.post('http://localhost:5000/api/test2/testcontr2', formData)
-        .then(function (response) {
-            console.log(response);
-        }).catch(function (error) {
-            console.log(error);
-        });
-
-}
+document.title = 'Home'
 
 </script>
