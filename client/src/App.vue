@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="mb-10">
+    <header class="mb-16">
       <NavbarForAdmin v-if="userStore.admin" />
       <!-- <NavbarForApplicant v-else />
       <NavbarForEmployer /> -->
