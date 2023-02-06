@@ -7,6 +7,15 @@
 
 <script setup>
 import axios from 'axios'
+import { onBeforeMount } from 'vue';
+
+import { useTestStore } from '../stores/testStore'
+
+const testStore = useTestStore()
+
+onBeforeMount(() => {
+    testStore.admin = true
+})
 
 let file = []
 
