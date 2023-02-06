@@ -9,7 +9,7 @@
 import axios from 'axios'
 import { onBeforeMount } from 'vue';
 
-import { useTestStore } from '../stores/testStore'
+import { useTestStore } from '../stores/userStore'
 
 const testStore = useTestStore()
 
