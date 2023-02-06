@@ -21,12 +21,13 @@ import NavbarForEmployer from './components/Navbar/NavbarForEmployer.vue';
 import { ref, onBeforeMount } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
 
-import { useTestStore } from './stores/testStore'
+import { useUserStore } from './stores/userStore'
 
-const testStore = useTestStore()
+const userStore = useUserStore()
 
 onBeforeMount(() => {
-  testStore.admin = true
+  console.log('test')
+  userStore.admin = true
 })
 
 </script>

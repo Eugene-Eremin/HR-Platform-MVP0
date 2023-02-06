@@ -45,8 +45,6 @@ const navbarStore = useNavbarStore()
 
 navbarStore.pathNow = useRoute().path
 
-console.log(navbarStore.pathNow)
-
 document.title = 'Home'
 
 </script>
