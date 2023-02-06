@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="mb-10">
-      <NavbarForAdmin v-if="testStore.admin" />
+      <NavbarForAdmin v-if="userStore.admin" />
       <NavbarForApplicant v-else />
       <NavbarForEmployer />
     </header>
