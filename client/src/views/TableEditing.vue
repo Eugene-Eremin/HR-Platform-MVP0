@@ -13,7 +13,7 @@ const navbarStore = useNavbarStore()
 
 navbarStore.pathNow = useRoute().path
 
-document.title = 'Table Editing'
+document.title = 'Редактирование таблиц'
 
 </script>
 

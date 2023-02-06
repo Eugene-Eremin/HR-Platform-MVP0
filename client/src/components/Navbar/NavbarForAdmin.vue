@@ -65,10 +65,8 @@
                         </li>
                     </ul>
                 </div>
-
             </nav>
         </div>
-        <div class="mx-auto lg:ml-80"></div>
     </div>
 </template>
 
@@ -119,6 +117,13 @@ document.addEventListener("DOMContentLoaded", () => {
         navOpen.classList.toggle("hidden");
     });
 
+    homeLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        sidebar.classList.toggle("show");
+        navClosed.classList.toggle("hidden");
+        navOpen.classList.toggle("hidden");
+    });
+
     clientsLink.addEventListener("click", (e) => {
         e.preventDefault();
         sidebar.classList.toggle("show");
@@ -141,13 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     tableEditingLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        sidebar.classList.toggle("show");
-        navClosed.classList.toggle("hidden");
-        navOpen.classList.toggle("hidden");
-    });
-
-    homeLink.addEventListener("click", (e) => {
         e.preventDefault();
         sidebar.classList.toggle("show");
         navClosed.classList.toggle("hidden");

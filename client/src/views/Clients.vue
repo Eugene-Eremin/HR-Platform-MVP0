@@ -13,7 +13,7 @@ const navbarStore = useNavbarStore()
 
 navbarStore.pathNow = useRoute().path
 
-document.title = 'Clients'
+document.title = 'Клиенты'
 
 </script>
 

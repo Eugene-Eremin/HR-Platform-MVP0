@@ -12,9 +12,9 @@
                             или сотрудников в зависимости от ваших потребностей.</p>
                     </div>
                     <div class="mt-16 w-full">
-                        <button
+                        <RouterLink to="/vacancies"
                             class="px-4 bg-gray-900 flex justify-between items-center w-full lg:w-72 h-14  text-white hover:bg-gray-700 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
-                            <RouterLink to="/vacancies" class="text-xl font-medium leading-5">Начать</RouterLink>
+                            <p class="text-xl font-medium leading-5">Начать</p>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.66663 16H25.3333" stroke="white" stroke-width="1.5" stroke-linecap="round"
@@ -24,7 +24,7 @@
                                 <path d="M20 10.6667L25.3333 16" stroke="white" stroke-width="1.5"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </RouterLink>
                     </div>
                 </div>
                 <div
@@ -45,6 +45,6 @@ const navbarStore = useNavbarStore()
 
 navbarStore.pathNow = useRoute().path
 
-document.title = 'Home'
+document.title = 'Главная'
 
 </script>
