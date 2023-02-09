@@ -31,3 +31,7 @@ onBeforeMount(() => {
 })
 
 </script>
+
+<style>
+
+</style>
