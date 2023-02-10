@@ -1,7 +1,8 @@
 <template>
+    <!-- Верхняя патель -->
     <nav id="navbar" class="drop-shadow-2xl fixed top-0 z-40 flex w-full flex-row bg-gray-700 px-4 justify-between">
         <ul class="breadcrumb flex-row items-center py-4 text-lg text-white sm:flex">
-            <li class="inline">
+            <li class="inline transition ease-in-out duration-350 hover:text-gray-300 active:text-gray-400">
                 <RouterLink to="/">MVP0</RouterLink>
             </li>
             <li class="inline">
@@ -20,6 +21,7 @@
         </button>
     </nav>
 
+    <!-- Левый сайтбар -->
     <div id="containerSidebar" class="z-40">
         <div class="navbar-menu relative z-40">
             <nav id="sidebar"
@@ -31,20 +33,20 @@
                     <ul class="mb-8 text-sm font-medium">
                         <li>
                             <RouterLink id="homeLink"
-                                class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600" to="/">
+                                class="transition ease-in-out duration-350 flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600" to="/">
                                 <span class="select-none">Главня</span>
                             </RouterLink>
                         </li>
                         <li>
                             <RouterLink id="clientsLink"
-                                class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                                class="transition ease-in-out duration-350 flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                                 to="/clients">
                                 <span class="select-none">Клиенты</span>
                             </RouterLink>
                         </li>
                         <li>
                             <RouterLink id="vacanciesLink"
-                                class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                                class="transition ease-in-out duration-350 flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                                 to="/vacancies">
                                 <span class="select-none">Вакансии</span>
                             </RouterLink>

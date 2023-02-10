@@ -2,13 +2,14 @@
   <div>
     <header class="mb-16">
       <NavbarForAdmin v-if="userStore.admin" />
-      <!-- <NavbarForApplicant v-else />
-      <NavbarForEmployer /> -->
+      <!-- <NavbarForApplicant v-else-if /> -->
+      <!-- <NavbarForEmployer  v-else /> -->
     </header>
     <main>
       <RouterView />
     </main>
     <footer>
+      <!-- ... -->
     </footer>
   </div>
 </template>
@@ -26,12 +27,9 @@ import { useUserStore } from './stores/userStore'
 const userStore = useUserStore()
 
 onBeforeMount(() => {
-  console.log('test')
+  // ...
   userStore.admin = true
+  // ...
 })
 
 </script>
-
-<style>
-
-</style>

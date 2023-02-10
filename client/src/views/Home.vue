@@ -7,13 +7,13 @@
                     <div>
                         <p class="text-3xl xl:text-4xl font-semibold leading-9 text-gray-800">MVP0</p>
                     </div>
-                    <div class="mt-4 lg:w-4/5 xl:w-3/5">
+                    <div class="mt-4 xl:w-3/5">
                         <p class="text-base leading-6 text-gray-600">MVP0 — это HR-платформа, где вы можете найти работу
                             или сотрудников в зависимости от ваших потребностей.</p>
                     </div>
                     <div class="mt-16 w-full drop-shadow-2xl">
                         <RouterLink to="/vacancies"
-                            class="px-4 rounded-md bg-gray-900 flex justify-between items-center w-full lg:w-72 h-14  text-white hover:bg-gray-700 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
+                            class="transition ease-in-out duration-350 px-4 rounded-md bg-gray-900 flex justify-between items-center w-full lg:w-72 h-14  text-white hover:bg-gray-700 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
                             <p class="text-xl font-medium leading-5">Начать</p>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
