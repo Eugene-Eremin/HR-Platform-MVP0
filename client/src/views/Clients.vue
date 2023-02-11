@@ -10,7 +10,7 @@
                 <SearchForm />
 
                 <!-- Добавить пользователя -->
-                <AddOrViewUser v-if="userStore.admin" />
+                <AddOrViewUser v-if="userStore.admin == 'admin'" />
 
             </div>
 

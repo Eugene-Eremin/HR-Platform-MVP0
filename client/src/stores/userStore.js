@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore('userStore', () => {
 
-    const admin = ref(false)
+    const admin = ''
 
     return { admin }
 })

@@ -6,9 +6,9 @@
             <h3 class="my-auto text-lg font-medium leading-6 text-gray-400">Выбранный пользователь</h3>
 
             <!-- Выпадающий список с опциями -->
-            <div v-if="userStore.admin" class="ml-auto h-[49.2px] flex my-auto items-center text-gray-400">
+            <div class="ml-auto h-[49.2px] flex my-auto items-center text-gray-400">
 
-                <OptionsDropdown />
+                <OptionsDropdown v-if="userStore.admin == 'admin'"/>
 
             </div>
         </div>

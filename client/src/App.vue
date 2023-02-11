@@ -1,9 +1,9 @@
 <template>
   <div>
     <header class="mb-16">
-      <NavbarForAdmin v-if="userStore.admin" />
-      <!-- <NavbarForApplicant v-else-if /> -->
-      <!-- <NavbarForEmployer  v-else /> -->
+      <NavbarForAdmin v-if="userStore.admin == 'admin'" />
+      <NavbarForApplicant v-else-if="userStore.admin == 'applicant'" />
+      <NavbarForEmployer v-else />
     </header>
     <main>
       <RouterView />
@@ -28,7 +28,8 @@ const userStore = useUserStore()
 
 onBeforeMount(() => {
   // ...
-  userStore.admin = true
+  const rolesTest = ['admin', 'applicant', 'employer']
+  userStore.admin = rolesTest[0]
   // ...
 })
 
