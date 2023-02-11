@@ -228,7 +228,7 @@
 <script setup>
 import OptionsDropdown from './OptionsDropdown.vue';
 
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 
 import { useOptionsStore } from '../../../../stores/oprionsStore';
 import { useUserStore } from '../../../../stores/userStore';
@@ -241,5 +241,20 @@ const downloadSelectedResume = () => {
     console.log('Скачать резюме выбранного пользователся')
 }
 
+
+const userInfoCreate = reactive({
+    name: '', // ввод вручную ФИО...
+    groups: [], // [0 (админ), 2(работодатель)] - будет выбирать из выпад. списка
+    phoneNumber: 0, // ввод вручную только цифры
+    searchScopeJob: 0, // 1 (недвижимость) или 3 (строительство) - выбирает из выпад. списка
+    summary: {}, // функционал загрузки файла и закрепления его за этим пользователем
+    summaryLink: '', // или вместо файла ссылка на резюме в ручную
+    workNow: '', // true (да) или false (нет)
+    lastJobs: [[]], // [ ['Google', 'IT', 'Директор', '2022/11'], [...], ...]
+    eucationLevel: 0, // 1 (высшее), 2 (среднее)
+    spokenLanguages: [[]], // [ ['Английский', '9'], [...], ...]
+    ownedSkills: [[]], // [ ['Стрессоустойчиость', '6'], [...], ...]
+    socialMedia: [[]], // [ ['Linkedin', 'https://test.com'], [...], ...]
+})
 
 </script>
