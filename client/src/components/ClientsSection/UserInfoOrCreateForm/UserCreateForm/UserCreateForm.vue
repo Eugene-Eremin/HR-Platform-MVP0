@@ -18,16 +18,21 @@
             <dl>
                 <div class="border-b border-gray-700 bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <dt class="text-sm font-medium">Имя:</dt>
-                    <dd class="mt-1 text-sm sm:col-span-2 sm:mt-0 break-words">Сергей Сергеев Сергеевич</dd>
+                    <dd class="mt-1 text-sm sm:col-span-2 sm:mt-0 break-words">
+                        <input v-model="userInfoCreate.name" class="transition ease-in-out duration-350 focus:outline-none focus:ring focus:ring-gray-400 focus:border-gray-500 w-full border text-sm rounded-md block p-1 bg-gray-700 border-gray-600 placeholder-gray-400" type="text" />
+                    </dd>
                 </div>
                 <div class="border-b border-gray-700 bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <dt class="text-sm font-medium ">Группы пользователя:</dt>
-                    <dd class="mt-1 text-sm sm:col-span-2 sm:mt-0 break-words">Администратор, Работадатель
+                    <dd class="mt-1 text-sm sm:col-span-2 sm:mt-0 break-words">
+                        <GroupsDropdown />
                     </dd>
                 </div>
                 <div class="border-b border-gray-700 bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <dt class="text-sm font-medium ">Номер телефона:</dt>
-                    <dd class="mt-1 text-sm  sm:col-span-2 sm:mt-0 break-words">+ 7 900 000 00 00</dd>
+                    <dd class="mt-1 text-sm  sm:col-span-2 sm:mt-0 break-words">
+                        <input v-model="userInfoCreate.phoneNumber" class="transition ease-in-out duration-350 focus:outline-none focus:ring focus:ring-gray-400 focus:border-gray-500 w-full border text-sm rounded-md block p-1 bg-gray-700 border-gray-600 placeholder-gray-400" type="text" />
+                    </dd>
                 </div>
                 <div class="border-b border-gray-700 bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <dt class="text-sm font-medium ">Сфера поиска работы:</dt>
@@ -227,6 +232,7 @@
 
 <script setup>
 import OptionsDropdown from './OptionsDropdown.vue';
+import GroupsDropdown from './GroupsDropdown.vue'
 
 import { ref, reactive } from 'vue';
 
@@ -243,18 +249,18 @@ const downloadSelectedResume = () => {
 
 
 const userInfoCreate = reactive({
-    name: '', // ввод вручную ФИО...
-    groups: [], // [0 (админ), 2(работодатель)] - будет выбирать из выпад. списка
-    phoneNumber: 0, // ввод вручную только цифры
-    searchScopeJob: 0, // 1 (недвижимость) или 3 (строительство) - выбирает из выпад. списка
-    summary: {}, // функционал загрузки файла и закрепления его за этим пользователем
-    summaryLink: '', // или вместо файла ссылка на резюме в ручную
-    workNow: '', // true (да) или false (нет)
-    lastJobs: [[]], // [ ['Google', 'IT', 'Директор', '2022/11'], [...], ...]
-    eucationLevel: 0, // 1 (высшее), 2 (среднее)
-    spokenLanguages: [[]], // [ ['Английский', '9'], [...], ...]
-    ownedSkills: [[]], // [ ['Стрессоустойчиость', '6'], [...], ...]
-    socialMedia: [[]], // [ ['Linkedin', 'https://test.com'], [...], ...]
+    name: null, // ввод вручную ФИО...
+    groups: null, // [0 (админ), 2(работодатель)] - будет выбирать из выпад. списка
+    phoneNumber: null, // ввод вручную только цифры
+    searchScopeJob: null, // 1 (недвижимость) или 3 (строительство) - выбирает из выпад. списка
+    summary: null, // функционал загрузки файла и закрепления его за этим пользователем
+    summaryLink: null, // или вместо файла ссылка на резюме в ручную
+    workNow: null, // true (да) или false (нет)
+    lastJobs: null, // [ ['Google', 'IT', 'Директор', '2022/11'], [...], ...]
+    eucationLevel: null, // 1 (высшее), 2 (среднее)
+    spokenLanguages: null, // [ ['Английский', '9'], [...], ...]
+    ownedSkills: null, // [ ['Стрессоустойчиость', '6'], [...], ...]
+    socialMedia: null, // [ ['Linkedin', 'https://test.com'], [...], ...]
 })
 
 </script>

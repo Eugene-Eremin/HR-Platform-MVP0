@@ -1,4 +1,5 @@
 <template>
+    <!-- Выпадающий список с опциями -->
     <Menu as="div" class="relative inline-block text-left">
         <div>
             <MenuButton
